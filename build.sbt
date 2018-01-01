@@ -8,7 +8,12 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 scalaVersion := "2.12.3"
 
 libraryDependencies += guice
+libraryDependencies += ws
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test
+
+// GCP
+libraryDependencies += "com.google.cloud" % "google-cloud-storage" % "1.14.0"
+
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.canopus.controllers._"

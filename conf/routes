@@ -5,6 +5,10 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
+GET     /gcs/file-list              controllers.GcsController.fileList
+GET     /gcs/create-file/:filename  controllers.GcsController.createFile(filename: String)
+GET     /gcs/sign-url/:filename     controllers.GcsController.signUrl(filename: String)
+GET     /gcs/upload-url/:filename   controllers.GcsController.createResumeUrl(filename: String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
